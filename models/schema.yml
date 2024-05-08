@@ -17,10 +17,6 @@ sources:
           - name: purchase_price
             description: greenweez purchase price
             
-              
-              
-              
-              
       - name: sales
         identifier: raw_gz_sales
         description: sales of greenweez/ for each product_id there is an associated orders_id
@@ -41,10 +37,9 @@ sources:
             description: revenue
           - name: quantity
             description: quantity
+
               
 
-
-        
       - name: ship
         identifier: raw_gz_ship
         description: greenweez shipping information
@@ -60,5 +55,46 @@ sources:
             description: greenweez logcost 
           - name: ship_cost
             description: greenweez shipping cost
+
            
-              
+
+      - name: adwords
+        identifier: raw_gz_adwords
+        description: greenweez adwords
+        columns:
+          - name: campaign_key
+            description: unique id 
+            tests:
+                - unique
+                - not_null
+
+
+      - name: bing
+        identifier: raw_gz_bing
+        description: greenweez bing
+        columns:
+          - name: campaign_key
+            description: unique id 
+            tests:
+                - unique
+                - not_null
+
+      - name: criteo
+        identifier: raw_gz_criteo
+        description: greenweez criteo
+        columns:
+          - name: campaign_key
+            description: unique id 
+            tests:
+                - unique
+                - not_null
+
+      - name: facebook
+        identifier: raw_gz_facebook
+        description: greenweez facebook
+        columns:
+          - name: campaign_key
+            description: unique id 
+            tests:
+                - unique
+                - not_null
